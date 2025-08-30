@@ -1,0 +1,30 @@
+# IDE智能代码分析提示词集 - Python依赖
+
+# 代码质量工具
+pylint>=2.17.0
+black>=23.0.0
+mypy>=1.0.0
+flake8>=6.0.0
+isort>=5.12.0
+
+# 配置和数据处理
+pyyaml>=6.0
+toml>=0.10.2
+jsonschema>=4.17.0
+
+# 测试框架
+pytest>=7.0.0
+coverage>=7.0.0
+
+# 代码分析
+radon>=5.1.0
+mccabe>=0.7.0
+bandit>=1.7.0
+
+# 文件处理
+pathlib2>=2.3.7
+click>=8.1.0
+
+# 报告生成
+jinja2>=3.1.0
+markdown>=3.4.0
