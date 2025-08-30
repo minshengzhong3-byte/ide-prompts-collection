@@ -1,11 +1,11 @@
-# 🚀 TraeAI 智能提示词集合
+# 🚀 TraeAI智能提示词集
 
-> **TraeAI Prompt Collection** - 专为Cursor、Trae、VS Code等IDE环境设计的智能代码分析提示词系统，支持自动环境检测、路径适配和规则同步。
+> 专为Cursor、Trae、VS Code等IDE环境设计的智能代码分析提示词系统，支持自动环境检测、路径适配和规则同步。
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)](https://github.com/minshengzhong3-byte/ide-prompts-collection)
 [![IDE Support](https://img.shields.io/badge/IDE-Cursor%20%7C%20Trae%20%7C%20VS%20Code-green.svg)](https://github.com/minshengzhong3-byte/ide-prompts-collection)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/minshengzhong3-byte/ide-prompts-collection/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/minshengzhong3-byte/ide-prompts-collection/blob/main/LICENSE)
 
 ## ✨ **核心特性**
 
@@ -24,6 +24,34 @@
 | **Cursor** | `.cursor/`目录 | `.cursor/project_rules.md` | ✅ 完全支持 |
 | **Trae** | `.trae/`目录 | `.trae/project_rules.md` | ✅ 完全支持 |
 | **VS Code** | `.vscode/`目录 | `.vscode/project_rules.md` | ✅ 完全支持 |
+
+## 📚 **提示词集分类**
+
+### **🔧 核心基础层 (Core Layer)**
+- **base_rules.md** - 基础行为规则和状态管理
+- **error_handling.md** - 错误处理和恢复机制
+- **tools_config.md** - 工具配置和集成指南
+- **ide_adapter.md** - IDE环境检测和路径适配
+
+### **🎭 身份专属层 (Identity Layer)**
+- **code_analyst/** - 代码分析师提示词集
+- **architect/** - 架构师提示词集
+- **code_reviewer/** - 代码审查员提示词集
+- **developer/** - 开发者提示词集
+- **qa/** - 测试员提示词集
+
+### **🛠️ 技术路径层 (Technical Path Layer)**
+- **code_analysis/** - 代码分析技术路径
+- **static_review/** - 静态审查技术路径
+- **pattern_matching/** - 模式匹配技术路径
+- **general_research/** - 通用研究技术路径
+
+### **📋 阶段特定层 (Stage Specific Layer)**
+- **analysis/** - 分析阶段提示词
+- **design/** - 设计阶段提示词
+- **implementation/** - 实现阶段提示词
+- **testing/** - 测试阶段提示词
+- **deployment/** - 部署阶段提示词
 
 ## 🚀 **快速开始**
 
@@ -62,55 +90,86 @@ python3 tools/ide_detector.py
 - `.trae/project_rules.md` (Trae IDE)  
 - `.vscode/project_rules.md` (VS Code)
 
-## 📁 **提示词集结构**
+## 🔍 **智能拉取指南**
 
-```
-traeai-prompts/
-├── 🧠 **核心基础层** (Core Layer)
-│   ├── base_rules.md          # 基础规则和状态管理
-│   ├── error_handling.md      # 错误处理和恢复机制
-│   ├── tools_config.md        # 工具配置和集成
-│   └── ide_adapter.md         # IDE环境适配器
-│
-├── 🎭 **身份专属层** (Identity Layer)
-│   ├── code_analyst/          # 代码分析师提示词
-│   ├── architect/             # 架构师提示词
-│   ├── code_reviewer/         # 代码审查员提示词
-│   ├── developer/             # 开发者提示词
-│   └── qa/                    # 测试员提示词
-│
-├── 🛠️ **技术路径层** (Technical Path Layer)
-│   ├── code_analysis/         # 代码分析路径
-│   ├── static_review/         # 静态审查路径
-│   └── pattern_matching/      # 模式匹配路径
-│
-└── 🔧 **工具集成层** (Tools Integration Layer)
-    ├── ide_detector.py        # IDE检测器
-    ├── detect_ide.bat         # Windows脚本
-    └── detect_ide.sh          # Linux/macOS脚本
+### **按功能拉取**
+```bash
+# 拉取代码分析相关提示词
+git clone https://github.com/minshengzhong3-byte/ide-prompts-collection.git
+cp -r ide-prompts-collection/trae_prompt_sets/code_analysis/ your-project/
+cp -r ide-prompts-collection/trae_prompt_sets/identities/code_analyst/ your-project/
 ```
 
-## 🧠 **提示词分类系统**
+### **按身份拉取**
+```bash
+# 拉取架构师相关提示词
+cp -r ide-prompts-collection/trae_prompt_sets/identities/architect/ your-project/
+cp -r ide-prompts-collection/trae_prompt_sets/technical_paths/ your-project/
+```
 
-### **1. 核心基础层 (Core Layer)**
-- **用途**：所有提示词的基础，必须继承
-- **包含**：状态管理、流程控制、异常处理、IDE适配
-- **特点**：通用性强，适用于所有项目
+### **按阶段拉取**
+```bash
+# 拉取设计阶段提示词
+cp -r ide-prompts-collection/trae_prompt_sets/stages/design/ your-project/
+cp -r ide-prompts-collection/trae_prompt_sets/identities/architect/ your-project/
+```
 
-### **2. 身份专属层 (Identity Layer)**
-- **用途**：根据不同角色提供专业提示词
-- **包含**：代码分析师、架构师、代码审查员、开发者、测试员
-- **特点**：角色专业化，任务导向
+## 📁 **项目结构**
 
-### **3. 技术路径层 (Technical Path Layer)**
-- **用途**：根据技术需求选择合适的方法
-- **包含**：代码分析、静态审查、模式匹配
-- **特点**：技术专业化，方法导向
-
-### **4. 工具集成层 (Tools Integration Layer)**
-- **用途**：提供自动化工具和脚本
-- **包含**：IDE检测、路径同步、状态监控
-- **特点**：自动化程度高，易于集成
+```
+ide-prompts-collection/
+├── .cursor/                       # Cursor IDE配置
+│   └── project_rules.md          # Cursor固定规则文件
+├── .trae/                        # Trae IDE配置
+│   └── project_rules.md          # Trae固定规则文件
+├── .vscode/                      # VS Code兼容配置
+│   └── project_rules.md          # VS Code规则文件
+├── trae_rules/                   # 项目规则管理
+│   ├── project_rules.md          # 主规则文件
+│   ├── last_status.json          # 状态备份
+│   └── ide_detection_report.json # IDE检测报告
+├── trae_prompt_sets/             # 提示词集
+│   ├── core/                     # 核心基础层
+│   │   ├── base_rules.md         # 基础规则
+│   │   ├── error_handling.md     # 错误处理
+│   │   ├── tools_config.md       # 工具配置
+│   │   └── ide_adapter.md        # IDE适配器
+│   ├── identities/               # 身份专属层
+│   │   ├── code_analyst/         # 代码分析师
+│   │   ├── architect/            # 架构师
+│   │   ├── code_reviewer/        # 代码审查员
+│   │   ├── developer/            # 开发者
+│   │   └── qa/                   # 测试员
+│   ├── technical_paths/          # 技术路径层
+│   │   ├── code_analysis/        # 代码分析路径
+│   │   ├── static_review/        # 静态审查路径
+│   │   ├── pattern_matching/     # 模式匹配路径
+│   │   └── general_research/     # 通用研究路径
+│   └── stages/                   # 阶段特定层
+│       ├── analysis/             # 分析阶段
+│       ├── design/               # 设计阶段
+│       ├── implementation/       # 实现阶段
+│       ├── testing/              # 测试阶段
+│       └── deployment/           # 部署阶段
+├── tools/                        # 工具集
+│   ├── ide_detector.py           # IDE检测器
+│   ├── detect_ide.bat            # Windows检测脚本
+│   ├── detect_ide.sh             # Linux/macOS检测脚本
+│   ├── deploy.py                 # 部署工具
+│   ├── setup.bat                 # Windows安装脚本
+│   ├── setup.sh                  # Linux/macOS安装脚本
+│   └── validate.py               # 验证工具
+├── config/                       # 配置文件
+│   ├── ide_setup/                # IDE设置
+│   └── language_support/         # 语言支持
+├── examples/                     # 使用示例
+├── templates/                    # 模板文件
+├── docs/                         # 详细文档
+├── deploy.bat                    # Windows一键部署
+├── deploy.sh                     # Linux/macOS一键部署
+├── requirements.txt              # Python依赖
+└── README.md                     # 项目说明
+```
 
 ## 🔧 **使用方法**
 
@@ -227,13 +286,6 @@ cp trae_rules/project_rules.md .vscode/
 
 我们欢迎所有形式的贡献！请查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解详情。
 
-### **如何贡献**
-1. Fork 这个项目
-2. 创建您的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个 Pull Request
-
 ### **贡献类型**
 - 🐛 Bug 修复
 - ✨ 新功能
@@ -265,4 +317,4 @@ cp trae_rules/project_rules.md .vscode/
 
 **让AI编程更智能，让开发更高效！** 🚀
 
-*此项目由智能协调AI自动生成和维护*
+*此项目由TraeAI智能协调系统自动生成和维护*
